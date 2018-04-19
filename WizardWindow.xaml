@@ -1,0 +1,78 @@
+﻿<Window x:Class="AgileACW_WPF.WizardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgileACW_WPF"
+        mc:Ignorable="d"
+        Title="WizardWindow" Height="462.344" Width="538.672">
+    <Grid>
+        
+        <StackPanel x:Name="Page1_StackPanel" Orientation="Vertical" Margin="15" Visibility="Collapsed">
+            <TextBlock Text="Add Assessment" Margin="15" HorizontalAlignment="Center" FontSize="20"/>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Session" Width="120"/>
+                <TextBox x:Name="Session_TextBox" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  Margin="5">
+                <TextBlock Text="Subject Area" Width="120"/>
+                <ComboBox x:Name="Area_ComboBox" Width="120"/>
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Module Code" Width="120"/>
+                <ComboBox x:Name="ModuleCode_ComboBox"  Width="120" IsEditable="True"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Module Name" Width="120"/>
+                <TextBox x:Name="ModuleName_TextBox" Width="220" Height="36" TextWrapping="Wrap"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Assessment Type" Width="120"/>
+                <ComboBox x:Name="AssessType_ComboBox" Width="120">
+                    <ComboBoxItem Content=""/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Assessment Code" Width="120"/>
+                <TextBox x:Name="AssessCode_TextBox" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Assessment Name" Width="120"/>
+                <TextBox x:Name="AssessName_TextBox"  Width="220" Height="36" TextWrapping="Wrap"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel x:Name="Page2_StackPanel" Orientation="Vertical" Margin="15" Visibility="Visible">
+            <TextBlock Text="Add Assessment" Margin="15" HorizontalAlignment="Center" FontSize="20"/>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Percent of grade" Width="120"/>
+                <TextBox x:Name="PercentGrade_TextBox"  Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Compulsary Pass" Width="120"/>
+                <CheckBox x:Name="CompulsaryPass_CheckBox"  />
+            
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Is the reassessment the same?" Width="120" TextWrapping="Wrap"/>
+                <CheckBox x:Name="Reassessment_CheckBox" VerticalAlignment="Center" />
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Release Date" Width="120"/>
+                <DatePicker x:Name="ReleaseDate_DatePicker"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Feedback Date" Width="120"/>
+                <DatePicker x:Name="FeedbackDate_DatePicker"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Permitted Extension Length" Width="120" TextWrapping="Wrap"/>
+                <TextBox x:Name="Extension_TextBox" Width="120"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
